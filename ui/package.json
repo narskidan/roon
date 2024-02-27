@@ -1,0 +1,26 @@
+{
+  "name": "roon",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "dependencies": {
+    "@tweenjs/tween.js": "^21.0.0",
+    "@urbit/api": "^2.0.0",
+    "@urbit/http-api": "^2.0.0",
+    "firebase": "^10.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-typewriter-effect": "^1.1.0",
+    "three": "^0.157.0",
+    "typewriter-effect": "^2.21.0"
+  },
+  "devDependencies": {
+    "@holium/vite-plugin-urbit": "^0.8.0",
+    "@vitejs/plugin-react-refresh": "^1.3.1",
+    "vite": "^4.1.0"
+  }
+}

@@ -1,0 +1,373 @@
+@font-face {
+  font-family: 'ApercuPro-Regular';
+  src: url('assets/ApercuPro-Regular.ttf') format('truetype');
+  /* You can also provide additional font formats (e.g., woff, woff2) for better browser compatibility */
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    user-select: none; 
+  }
+  
+main {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+#helloCanvas {
+  background-color: transparent;
+  font-family: 'Arial', sans-serif;
+  font-size: 4px;
+  /* Add more styles as needed */
+}
+
+
+header {
+    width: 100vw;
+    font-size: 33px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    background-color: transparent;
+    border-radius: 33px;
+    border: transparent;
+    color: #929292; /* Set text color to white */
+    font-size: 27px;
+    font-family: 'ApercuPro-Regular', sans-serif;    
+    outline: none;
+    height: auto;
+    width: 350px;
+}
+
+input::placeholder {
+  color: #929292;
+  text-align: center;
+}
+
+input.custom-cursor {
+  cursor: url('/assets/cursor.png') 0 0, auto; /* 0 0 is the cursor hotspot; adjust if needed */
+}
+
+.circle-clicked {
+  border: 0;
+}
+
+.action-div {
+  margin-top: 500px;
+  width: 500px;
+  height: 380px;
+  background-color: transparent; /* grey with 0.8 alpha */
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: fixed;
+  bottom: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  z-index: 33;
+  pointer-events: none;
+}
+
+#control-div {
+  margin: 33px;
+}
+
+.show-action-div {
+  bottom: 20% !important;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.remove-action-div {
+  bottom: -20% !important;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.action-button {
+  margin: 0 0px;
+}
+
+.black-btn {
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  border-radius: 33px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  pointer-events: all;
+  margin: 9px;
+}
+
+.action-button:hover {
+  background-color: #390ef7;
+}
+
+.log-div {
+  box-shadow: 0 0 0 1px #390ef7; /* Adjust the color (#333) as needed */
+  padding: 44px;
+  background-color: transparent;
+  border: 1px solid white;
+  opacity: 0.3;
+  font-size: 25px;
+  font-family: 'ApercuPro-Regular';
+  border-radius: 50px;
+}
+
+.blurred-shadow {
+  filter: blur(2px);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+}
+
+.content-wrapper {
+  position: absolute; 
+}
+
+.original-content {
+  position: relative;
+  z-index: 2;
+}
+
+.blurred-glow {
+  filter: blur(8px);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 100%; 
+  z-index: 1;   
+  opacity: 0.6; 
+}
+.action-button {
+  transform: translateX(-30%);
+  padding: 40px 90px;  /* Increase size by adding padding */
+  background-color: #333;  /* Dark background */
+  color: #FFF;  /* Light text */
+  border: none;
+  border-radius: 5px;  /* Rounded corners */
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+  transition: transform 0.3s, box-shadow 0.3s;  /* Smooth transition */
+}
+
+.action-button:hover {
+  transform: translateY(-2px);  /* Move button slightly up on hover */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);  /* Increase shadow on hover */
+}
+
+.log-div td:nth-child(1),
+.log-div td:nth-child(2),
+.log-div td:nth-child(4) {
+  opacity: 0;
+  transition: opacity 0.3s; /* Add a smooth transition effect */
+}
+
+.log-div tr:hover td:nth-child(1),
+.log-div tr:hover td:nth-child(2),
+.log-div tr:hover td:nth-child(4) {
+  opacity: 1;
+}
+
+.log-div table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.log-div th, td {
+  padding: 15px; /* Adjust the padding to increase row height */
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.log-div tr {
+  text-align: center;
+}
+
+.log-div tr:hover {
+  background-color: #7e7e7e7e
+}
+
+#button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.overlay-div {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7); /* semi-transparent black */
+  z-index: 9999; /* high z-index */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 25px;
+  cursor: pointer;
+  font-family: 'ApercuPro-Regular'
+}
+
+#left-cycle-button {
+  margin: 65px;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#left-cycle-button:hover {
+  background-color: rgb(131, 131, 131);
+  cursor: pointer;
+}
+
+#right-cycle-button {
+  margin: 65px;
+  border: 1px solid white;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+  border-radius: 50px;
+}
+
+#right-cycle-button:hover {
+  background-color: rgb(131, 131, 131);
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+  }
+  
+:-moz-placeholder {
+  text-align: center;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  background-color: #000; /* Blue color for the button */
+  color: white;
+  border-radius: 5px;
+  margin-left: 30px;
+  cursor: pointer;
+  font-family: 'ApercuPro-Regular', sans-serif;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #cdcdcd; /* Darker blue on hover */
+}
+
+.oracle {
+  border: 1px solid white;
+  padding: 12px;
+  text-align: center;
+}
+.main {
+  position: absolute;
+  z-index: 0;
+}
+
+.renderer {
+  position: absolute;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 10;
+}
+
+.parent-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.child-div-large {
+  height: 80%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.8); /* semi-transparent white for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.child-div-small {
+  height: 20%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* semi-transparent black for visibility */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#save-button {
+  background-color: transparent;
+  text-align: center;
+  border-radius: 33px;
+}
+
+#save-button:hover {
+  background-color: rgba(133, 133, 133, 0.562);
+}
+
+#cast-another-button {
+  border-radius: 33px;
+  top: 20%;
+  text-align: center;
+}
+
+#cast-another-button:hover {
+  background-color: rgba(248, 255, 144, 0.562);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      background-color: black;
+  }
+  to {
+      opacity: 1;
+      background-color: transparent;
+  }
+}
+
+.fadeIn {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
