@@ -1,6 +1,6 @@
 .reading {
   margin-bottom: 20px;
-  font-size: medium;
+  letter-spacing: 3px;
 }
 
 .symbol {
@@ -10,7 +10,7 @@
 }
 
 span {
-  font-size: smaller;
+  font-size: smalls;
   text-align: center;
   margin-bottom: 40px;
   color: grey

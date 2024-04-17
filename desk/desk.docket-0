@@ -1,10 +1,9 @@
-:~
-  title+'Rune'
-  info+'A rune casting app.'
-  color+0xee.5432
-  version+[1 20 0]
-  website+'https://tlon.io'
-  license+'MIT'
-  base+'roon'
-  glob-http+['https://bootstrap.urbit.org/glob-0v6.9nal9.6erfd.7qn37.omlck.ud5rb.glob' 0v6.9nal9.6erfd.7qn37.omlck.ud5rb]
+:~  title+'roon'
+    info+'Casting runes for divination'
+    color+0x2e.4347
+    glob-http+['https://bootstrap.urbit.org/glob-0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o.glob' 0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o]
+    base+'roon'
+    version+[0 0 1]
+    website+'https://git.lain.church'
+    license+'MIT'
 ==

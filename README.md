@@ -1,5 +1,22 @@
 # roon
 
+How I want to make this work:
+
+Upon initial install, we offer a landing page saying your first fortune is in the works, we'll let you know when it's ready.
+In the back, it scries Behn to poke back somewhere between 2-10 days (randomly).
+
+Once the poke comes, we do two things:
+1. Send a notification to landscape
+2. Send a scry to Behn to poke us again in 2-10 days (randomly)
+3. Mark that the reading has not been read yet.
+
+If they user opens the reading, then we:
+
+* check if they've opened the reading already. If not, do the fancy loading screen, then after it finishes send a poke to say they've read it.
+* If they have already read it, just show the current reading right away.
+
+But to start out, I just want to try getting the date via peek by modifying the current backend, and use that instead of the browser's date, to generate the reading.
+
 ## Desk
 
 The desk currently has the minimum amount of files necessary to distribute an application and should be distributable immediately. Any further Hoon development should happen here.
