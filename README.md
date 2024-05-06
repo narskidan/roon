@@ -4,6 +4,8 @@ An Urbit application that tells your fortune using stylized runes from the Hoon 
 
 `|install ~nocdev-nolsub-motluc-nammex %roon`
 
+![Screenshot 2024-05-06 at 9 59 40 a m](https://github.com/darighost/roon/assets/104947308/ec41353f-78a4-442f-8bf3-9a175e2acd56)
+
 ## How it works
 
 Upon install, the `on-init` arm of `app/roon.hoon` will set a 1 minute timer to Behn.
