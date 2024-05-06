@@ -1,6 +1,8 @@
 # roon
 
-An Urbit application that tells your fortune using stylized runes from the Hoon programming language
+An Urbit application that tells your fortune using stylized runes from the Hoon programming language.
+
+`|install ~nocdev-nolsub-motluc-nammex %roon`
 
 ## How it works
 
