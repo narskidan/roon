@@ -1,6 +1,6 @@
 :~  title+'roon'
     info+'Casting runes for divination'
-    color+0x2e.4347
+    color+0xe2.e2db
     glob-http+['https://bootstrap.urbit.org/glob-0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o.glob' 0v5.hurm4.ejod5.ngg9h.iub9i.n1j7o]
     base+'roon'
     version+[0 0 1]
