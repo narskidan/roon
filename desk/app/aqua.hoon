@@ -1,4 +1,4 @@
-::  An aquarium of virtual ships.  Put in some fish and watch them! Also a random comment
+::  An aquarium of virtual ships.  Put in some fish and watch them!
 ::
 ::  usage:
 ::  |start %aqua
