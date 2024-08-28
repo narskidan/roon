@@ -13,7 +13,7 @@
 :: (checks for hark lol)
 |=  [=bowl:gall msg=@t]
   =/  id      `@uvH`(end 7 (shas %yoho-notification eny.bowl))
-  =/  rope    [~ ~ q.byk.bowl /(scot %p %zod)/[dap.bowl]]
+  =/  rope    [~ ~ q.byk.bowl /(scot %p our.bowl)/[dap.bowl]]
   =/  action  [%add-yarn & & id rope now.bowl [ship+our.bowl msg ~] /[dap.bowl] ~]
   =/  =cage   [%hark-action !>(action)]
   [%pass /hark %agent [our.bowl %hark] %poke cage]
